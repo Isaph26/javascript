@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Vivendo em?</h1>
+    Vivendo onde:<input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="Executar()">
+    <div id="res"></div>
+
+    <script>
+        function Executar() {
+            var país = document.getElementById('pais').value 
+            // Ao add .value eu permito que o valr digitado pelo usuario seja corretamente obtido
+            var res = document.getElementById('res')
+            if (país == 'Brasil') {
+                res.innerHTML = `<p>Você é brasileiro(a)</p>`
+            } else {
+                res.innerHTML = '<p>Você é estrangeiro(a)</p>'
+            }
+           res.innerHTML += '<p>Parabéns</p>'
+        }   
+    </script>
+</body>
+</html>
